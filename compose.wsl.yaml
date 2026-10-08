@@ -1,0 +1,14 @@
+# Windows override: run from a WSL2 terminal (not PowerShell) so rviz2/rqt
+# open as normal Windows apps through WSLg.
+services:
+  dev:
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+      - WAYLAND_DISPLAY=${WAYLAND_DISPLAY:-wayland-0}
+      - XDG_RUNTIME_DIR=/mnt/wslg/runtime-dir
+      - PULSE_SERVER=/mnt/wslg/PulseServer
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-42}
+    volumes:
+      - ./:/home/ros/ws
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg

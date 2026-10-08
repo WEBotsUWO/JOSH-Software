@@ -1,0 +1,33 @@
+# Base setup - works on Docker Desktop (Windows / Mac) and Linux.
+#   docker compose build
+#   docker compose run --rm dev            # interactive shell
+#   docker compose run --rm smoke-test     # verifies ROS 2 works end to end
+#
+# Linux hosts: add the Linux override for host networking, CAN and GUI:
+#   docker compose -f compose.yaml -f compose.linux.yaml run --rm dev
+# Windows (WSL2) GUI: add the WSLg override:
+#   docker compose -f compose.yaml -f compose.wsl.yaml run --rm dev
+
+x-ros-common: &ros-common
+  image: humanoid/ros-jazzy-dev:latest
+  build:
+    context: ./docker
+    args:
+      USER_UID: ${HOST_UID:-1000}
+      USER_GID: ${HOST_GID:-1000}
+  volumes:
+    - ./:/home/ros/ws
+  environment:
+    - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-42}
+  ipc: host     # lets Fast DDS shared-memory transport work between containers
+  stdin_open: true
+  tty: true
+
+services:
+  dev:
+    <<: *ros-common
+    container_name: ros2-dev
+
+  smoke-test:
+    <<: *ros-common
+    command: ["bash", "/home/ros/ws/scripts/smoke_test.sh"]

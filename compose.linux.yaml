@@ -1,0 +1,15 @@
+# Linux-only override: native networking (talk to the Jetson / other laptops),
+# CAN adapters, and X11 GUI for rviz2 / rqt.
+# Run `xhost +local:` once on the host before launching GUI tools.
+services:
+  dev:
+    network_mode: host
+    pid: host
+    privileged: true          # needed for SocketCAN (can0) and USB devices
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-42}
+    volumes:
+      - ./:/home/ros/ws
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev:/dev
