@@ -2,7 +2,7 @@
 
 This folder is the Computer Vision team's home in JOSH Software.
 
-[Go to Ser Up](./setup/SETUP.md)
+[Go to Set Up](./setup/SETUP.md)
 
 You do not need to invent a robot brain that classifies the world and then separately learns every task. You need a trustworthy stream of **time-aligned images, robot state, language goals, and success labels** so a VLA and RL stack can act - and so you can prove whether they did.
 
