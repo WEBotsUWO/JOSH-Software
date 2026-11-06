@@ -6,7 +6,7 @@ These should be the steps to run to reach the current state before Monday's Stan
 
 **If you already have `git` then SKIP ts!**
 
-This section was written by chat :) cause I wanna go to bed.
+This section was written by chat 😃 cause I wanna go to bed.
 
 First check if **git** is installed.
 
@@ -30,9 +30,9 @@ If git is NOT found then you need to download it:
 git --version
 ```
 
-If there are NO errors, good :)
+If there are NO errors, good 😃
 
-If there ARE errors, then ask chat :)
+If there ARE errors, then ask chat 😃
 
 
 ## 2. Get the Repository (Repo)
@@ -87,9 +87,9 @@ If python is NOT found then you need to download it:
 python --version
 ```
 
-If there are NO errors, good :)
+If there are NO errors, good 😃
 
-If there ARE errors, then ngl, just ask chat :)
+If there ARE errors, then ngl, just ask chat 😃
 
 ## 4. Create Virtual Environment
 
@@ -173,7 +173,7 @@ Prepare yourself, the next section is a doozy 🥲
 
 Okay so now that the rough part is kinda over (you have no idea), every further change will affect the `cv` branch (which is the main branch where all of our work will be merged into BEFORE asking to merge everything into the `main` branch).
 
-If that didn't make sense, don't worry, it will soon........... but ngl, just ask chat :)
+If that didn't make sense, don't worry, it will soon........... but ngl, just ask chat 😃
 
 ---
 
@@ -220,7 +220,7 @@ Nevertheless, we have made some fixes and we now want to merge back into our mai
 
 IMPORTANT $\to$ We would need to move BACK to the `feature-3 branch` before merging the `fix branch` into it to create `merge 2`.
 
-(Ask me if you need any help understanding these concepts better. Otherwise ..... ask chat :))
+(Ask me if you need any help understanding these concepts better. Otherwise ..... ask chat 😃)
 
 ---
 
@@ -281,7 +281,7 @@ git branch
 
 If you see the `*` in front of your newly made branch then YAY!
 
-If you don't, then gg's. Don't ask me, just ask chat :)
+If you don't, then gg's. Don't ask me, just ask chat 😃
 
 (wait... do I hear my bed calling me?)
 
@@ -306,7 +306,7 @@ So from now on:
 1. Run `git pull origin cv` first so the latest `cv` commits land in your branch. (You might get some *merge conflicts* but honestly just chat it or try to figure it out, or hit me up)
 2. Make some changes in your branch (do some coding)
 3. Run `git status` to check your branch (Hopefully, you see `red` file/folder names)
-4. Run `git add .` to add the new/modified/deleted files/folders to the *staging area* (dw about it, or ask big gtt :))
+4. Run `git add .` to add the new/modified/deleted files/folders to the *staging area* (dw about it, or ask big gtt 😃)
 5. Run `git commit -m "[commit message]"`
     - example: `git commit -m "Updated README file"`
 
@@ -317,7 +317,7 @@ git commit -m "Fixed importing bug
 - Uploaded cached images"
 ```
 
-6. Now rerun `git status`. A finished commit does not leave a list of red files. If you still see red, those files were not added, so ask the w's in the shat :)
+6. Now rerun `git status`. A finished commit does not leave a list of red files. If you still see red, those files were not added, so ask the w's in the shat 😃
 7. Finally, run `git push` and pray nothing breaks (no actually pray the `cv` branch doesn't get nuked later on or we're cooked. Maybe even fried. So please make sure you are in `your branch` before making any changes and especially BEFORE running `git push`. Thanks!)
 
 ## 8. Done for now ig, idk, kinda, just @ me on discord
