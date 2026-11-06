@@ -2,9 +2,12 @@
 
 ## To-Do
 
-- [ ] Make SSH Key to train on GPU
-- [ ] Refactor **Computer Vision** folder
+| Item Name |
+| --- |
+| Make SSH Key to train on GPU |
 
 ## Done
 
-- [ ] Placehodler $\to$ (Answer)
+| Item Name | Date Completed |
+| --- | --- |
+| Refactor Computer Vision folder | 11/5/2026 |

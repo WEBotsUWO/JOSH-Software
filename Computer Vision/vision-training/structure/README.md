@@ -1,6 +1,6 @@
-# Vision Training structure
+# Vision Training - Structure
 
-[Back to the team list](../README.md)
+[Go to Step 1 - laptop detection stream](../step-1/README.md)
 
 Step 1 is one process on a laptop. Later steps add a filter, a tracker, and a ROS 2 node around the same record.
 

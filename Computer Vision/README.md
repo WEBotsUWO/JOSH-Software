@@ -1,4 +1,4 @@
-# JOSH computer vision
+# JOSH Computer Vision
 
 This folder is the Computer Vision team's home in JOSH Software.
 
