@@ -21,7 +21,7 @@ The scripts follow `subset`. A missing subset is train. `test` is never written 
 
 ## What we do not use
 
-RoboSense is 705 GB of outdoor footage. Its boxes are vehicle, pedestrian, and cyclist. The 10 GB `part_*` files are pieces of one tar, so one part does not open. It does not cover this class list.
+[RoboSense](https://huggingface.co/datasets/suhaisheng0527/RoboSense) is 705 GB of outdoor footage. Its boxes are vehicle, pedestrian, and cyclist. The 10 GB `part_*` files are pieces of one tar, so one part does not open. It does not cover this class list.
 
 ## Model
 
