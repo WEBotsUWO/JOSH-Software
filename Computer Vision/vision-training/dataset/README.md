@@ -1,6 +1,8 @@
 # Dataset and fine-tune
 
-[Back to Vision Training](../README.md). The class contract is [classes.yaml](../classes.yaml) (2026 names).
+[Go to Vision Training](../README.md)
+
+The classes we need to identify: [classes.yaml](../classes.yaml) (2026 names)
 
 ## What we train on
 
@@ -71,4 +73,6 @@ To run YOLOE-26n on one photo:
 python dataset/prompt_classes.py --image path\to\photo.jpg
 ```
 
-Cite EgoObjects: Chenchen Zhu et al., "EgoObjects: A Large-Scale Egocentric Dataset for Fine-Grained Object Understanding", ICCV 2023. https://github.com/facebookresearch/EgoObjects
+## Citations
+
+EgoObjects: Chenchen Zhu et al., "EgoObjects: A Large-Scale Egocentric Dataset for Fine-Grained Object Understanding", ICCV 2023. [GitHub](https://github.com/facebookresearch/EgoObjects)
