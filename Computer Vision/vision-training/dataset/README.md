@@ -6,7 +6,7 @@ The classes we need to identify: [classes.yaml](../classes.yaml) (2026 names)
 
 ## What we train on
 
-EgoObjects (Meta, ICCV 2023). Wearable cameras in homes and offices, so the view is eye level or lower, with 2D boxes. The public image zip is about 37 GiB. This folder reads a prefix of that zip and stops at 9 GB, then keeps the JPEGs that belong to train or val.
+[EgoObjects](https://ai.meta.com/datasets/egoobjects-dataset/) (Meta, ICCV 2023). Wearable cameras in homes and offices, so the view is eye level or lower, with 2D boxes. The public image zip is about 37 GiB. This folder reads a prefix of that zip and stops at 9 GB, then keeps the JPEGs that belong to train or val.
 
 Annotation JSON is about 0.24 GB on top of that, so the download stays under 10 GB. The zip is stored with a size in each local header, which is why a prefix still decompresses. Rerun the same command to resume.
 
