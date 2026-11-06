@@ -1,7 +1,5 @@
 # Set Up
 
-These should be the steps to run to reach the current state before Monday's Stand Up:
-
 ## 1. Install Git
 
 **If you already have `git` then SKIP ts!**
