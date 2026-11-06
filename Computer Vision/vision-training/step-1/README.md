@@ -1,4 +1,4 @@
-# Step 1 — laptop detection stream
+# Step 1 - laptop detection stream
 
 About two weeks for the whole folder. This meeting starts it. No names here: assign a role in the room. Two roles means two files.
 

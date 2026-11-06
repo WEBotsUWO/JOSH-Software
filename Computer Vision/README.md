@@ -2,7 +2,7 @@
 
 This folder is the Computer Vision team's home in JOSH Software.
 
-You do not need to invent a robot brain that classifies the world and then separately learns every task. You need a trustworthy stream of **time-aligned images, robot state, language goals, and success labels** so a VLA and RL stack can act — and so you can prove whether they did.
+You do not need to invent a robot brain that classifies the world and then separately learns every task. You need a trustworthy stream of **time-aligned images, robot state, language goals, and success labels** so a VLA and RL stack can act - and so you can prove whether they did.
 
 This is a map of ideas and contracts. The tldraw architecture diagram comes after this map is stable.
 

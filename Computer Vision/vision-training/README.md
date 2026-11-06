@@ -4,6 +4,8 @@ YOLO on camera images. Pretrained first, then our weights, then a stream the RL 
 
 [Back to the map](../README.md)
 
+[TODO list](todo.md)
+
 The CV lead owns this order and the detection record. Developers own the files named in the current step.
 
 ## Steps
@@ -26,6 +28,8 @@ Finish these before calling the system ready for RL integration. The publish rat
 | [plan](plan/README.md) | Why this order |
 | [structure](structure/README.md) | Modules and the detection record |
 | [examples/webcam_yolo.py](examples/webcam_yolo.py) | Short check that the webcam and `yolo26n.pt` work |
+| [classes.yaml](classes.yaml) | 110 classes the robot must name |
+| [dataset](dataset/README.md) | EgoObjects slice under 10 GB, then the yolo26n fine-tune |
 | [step-1](step-1/README.md) | Current assignment |
 
 Install once, from this folder:
