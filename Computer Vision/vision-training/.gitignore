@@ -3,3 +3,7 @@
 __pycache__/
 .venv/
 .vscode/
+
+#ignore yolotraining runs
+runs/
+**/runs/

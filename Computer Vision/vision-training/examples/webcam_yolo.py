@@ -7,5 +7,14 @@ Ultralytics downloads the file on first run. Offline, load
 
 from ultralytics import YOLO
 
+
 model = YOLO("yolo26n.pt")
-model.predict(source=0, show=True)
+
+model.train(
+    data=r"C:\Users\cryog\Documents\GitHub\JOSH-Software\Computer Vision\vision-training\examples\Update820\data.yaml", 
+    epochs=50, 
+    imgsz=640,
+    device="cpu"
+)
+##.venv\Scripts\Activate.ps1
+##deactivate after working
