@@ -1,8 +1,8 @@
-# Step 1 — laptop detection stream
+# Step 1 - laptop detection stream
 
-About two weeks for the whole folder. This meeting starts it. No names here: assign a role in the room. Two roles means two files.
+[Go to Vision Training](../README.md)
 
-[Back to the team list](../README.md). Field meanings live in [structure](../structure/README.md).
+Field meanings live in [Vision Training - Structure](../structure/README.md)
 
 Run the short check first, from `vision-training/`:
 
@@ -19,31 +19,57 @@ cd vision-training/step-1
 
 ## Roles
 
+**Grace**:
+
 | Role | File | Done when |
 | --- | --- | --- |
 | Camera | [capture.py](capture.py) | Opens camera 0, returns a BGR frame plus a timestamp, raises if the camera fails |
 | Detector | [detector.py](detector.py) | Loads `yolo26n.pt` once. Returns class id, class name, confidence, and `xyxy` for one frame. Every class |
+
+### Checklist
+
+- [ ] **Camera**: a window or a print shows a frame and a timestamp.
+- [ ] **Detector**: one frame returns a list of boxes from `yolo26n.pt`.
+
+**Valenzia**:
+
+| Role | File | Done when |
+| --- | --- | --- |
 | Schema | [messages.py](messages.py) | `Detection` and `FrameDetections` round-trip through JSON |
 | Rate | [throttle.py](throttle.py) | Passes at most 10 emits per second and counts skips |
+
+### Checklist
+
+- [ ] **Schema**: one `FrameDetections` survives `to_json` and `from_dict` with the same fields.
+- [ ] **Rate**: a burst of timestamps yields about 10 allows per second, and `skipped` counts the rest.
+
+**Daniel**:
+
+| Role | File | Done when |
+| --- | --- | --- |
 | Overlay | [overlay.py](overlay.py) | Draws class, confidence, camera FPS, and emit Hz. Returns the image |
 | Logger | [log_writer.py](log_writer.py) | Appends one JSON object per emitted frame to `detections.jsonl` |
-| Integrator | [run_step1.py](run_step1.py) | Calls the six in that order. Assign this last, or the lead keeps it |
 
-Logger pairs with Schema. Overlay pairs with Integrator. Camera and Detector are the two that need a webcam and the weight file.
+### Checklist
 
-## Two-hour bar
+- [ ] **Overlay**: one drawn image shows a class name and the two rates.
+- [ ] **Logger**: `detections.jsonl` gains one line.
 
-Your file imports, and your function does its one job on a real camera or a fake frame.
+## Notes
 
-- Camera: a window or a print shows a frame and a timestamp.
-- Detector: one frame returns a list of boxes from `yolo26n.pt`.
-- Schema: one `FrameDetections` survives `to_json` and `from_dict` with the same fields.
-- Rate: a burst of timestamps yields about 10 allows per second, and `skipped` counts the rest.
-- Overlay: one drawn image shows a class name and the two rates.
-- Logger: `detections.jsonl` gains one line.
+- `Logger` pairs with `Schema`
+- `Overlay` pairs with `Integrator`
+- `Camera` and `Detector` are the two that need a webcam and the weight file (`yolo26n.pt`)
 - Integrator: `main` calls the others. The full window can wait if a role is still open.
 
-## Two-week bar
+
+**Anyone**:
+
+| Role | File | Done when |
+| --- | --- | --- |
+| Integrator | [run_step1.py](run_step1.py) | Calls the six in that order. Assign this last, or the lead keeps it |
+
+## Final Testing
 
 From this directory:
 

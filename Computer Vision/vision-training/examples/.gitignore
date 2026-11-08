@@ -4,5 +4,5 @@ dataset/
 *.txt
 *.pt
 
-##update820 is just a dataset for cars etc. wtv (figure out wher to put them after)
-##probably in the actual dataset folder LOL
+#update820 is just a dataset for cars etc. wtv (figure out wher to put them after)
+#probably in the actual dataset folder LOL
