@@ -27,6 +27,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       can-utils python3-can \
       ros-jazzy-ros2-control ros-jazzy-ros2-controllers \
       ros-jazzy-rmw-cyclonedds-cpp \
+      ros-jazzy-mvsim \
+      ros-jazzy-slam-toolbox \
+      ros-jazzy-navigation2 \
+      ros-jazzy-nav2-bringup \
  && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt /tmp/requirements.txt
