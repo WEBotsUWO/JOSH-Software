@@ -11,11 +11,17 @@ from pathlib import Path
 
 from ego_index import load_must_list
 
+import warnings
+
+warnings.filterwarnings("ignore", category=FutureWarning)
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Prompt YOLOE-26n with the must-list.")
     parser.add_argument("--image", type=Path, help="Image to run. Omit with --list.")
-    parser.add_argument("--list", action="store_true", help="Print the must-list and exit.")
+    parser.add_argument(
+        "--list", action="store_true", help="Print the must-list and exit."
+    )
     parser.add_argument("--weights", default="yoloe-26n-seg.pt")
     args = parser.parse_args()
 
@@ -29,13 +35,18 @@ def main() -> None:
     from ultralytics import YOLOE
 
     model = YOLOE(args.weights)
+    print("Setting classes...")
     model.set_classes([row["prompt"] for row in classes])
+    print("Predicting...")
     results = model.predict(str(args.image), verbose=False)
+    print("DONE\n")
     boxes = results[0].boxes
     if boxes is None or len(boxes) == 0:
         print("no boxes")
         return
-    for cls, conf, xyxy in zip(boxes.cls.tolist(), boxes.conf.tolist(), boxes.xyxy.tolist()):
+    for cls, conf, xyxy in zip(
+        boxes.cls.tolist(), boxes.conf.tolist(), boxes.xyxy.tolist()
+    ):
         row = classes[int(cls)]
         x1, y1, x2, y2 = (round(v, 1) for v in xyxy)
         print(f"{row['name']}  {conf:.2f}  {x1} {y1} {x2} {y2}")
