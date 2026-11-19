@@ -1,0 +1,182 @@
+<mvsim_world version="1.0">
+  <!-- Simulation settings -->
+  <simul_timestep>5e-3</simul_timestep>
+
+  <!-- GUI options -->
+  <gui>
+      <cam_distance>15</cam_distance>
+  </gui>
+
+  <!-- Ground plane -->
+  <element class="ground_grid">
+  </element>
+
+<!-- blocks-->
+<!-- Square Table: 2m x 2m -->
+  <block:class name="square_table">
+    <shape>
+      <pt>-1 -1</pt>
+      <pt> 1 -1</pt>
+      <pt> 1  1</pt>
+      <pt>-1  1</pt>
+    </shape>
+    <zmin>0.0</zmin>
+    <zmax>0.75</zmax>
+    <color>#c68e53</color>
+  </block:class>
+
+  <!-- Purple Chair: 0.45m x 0.45m -->
+  <block:class name="purple_chair">
+    <shape>
+      <pt>-0.225 -0.225</pt>
+      <pt> 0.225 -0.225</pt>
+      <pt> 0.225  0.225</pt>
+      <pt>-0.225  0.225</pt>
+    </shape>
+    <zmin>0.0</zmin>
+    <zmax>0.85</zmax>
+    <color>#8a2be2</color>
+  </block:class>
+
+  <!-- ========================================== -->
+  <!-- OUTER PERIMETER WALLS (10m x 10m ROOM)     -->
+  <!-- ========================================== -->
+  <block>
+    <init_pose>0.0 5.0 0</init_pose>
+    <shape><pt>-5.1 -0.1</pt><pt>5.1 -0.1</pt><pt>5.1 0.1</pt><pt>-5.1 0.1</pt></shape>
+    <zmin>0.0</zmin><zmax>2.5</zmax><color>#8c8c8c</color>
+  </block>
+
+  <!-- South Wall Left Segment (x = -5.1 to -0.8) -->
+  <block>
+    <init_pose>-2.95 -5.0 0</init_pose>
+    <shape><pt>-2.15 -0.1</pt><pt>2.15 -0.1</pt><pt>2.15 0.1</pt><pt>-2.15 0.1</pt></shape>
+    <zmin>0.0</zmin><zmax>2.5</zmax><color>#8c8c8c</color>
+  </block>
+
+  <!-- South Wall Right Segment (x = +0.8 to +5.1, leaving 1.6m doorway at x = 0) -->
+  <block>
+    <init_pose>2.95 -5.0 0</init_pose>
+    <shape><pt>-2.15 -0.1</pt><pt>2.15 -0.1</pt><pt>2.15 0.1</pt><pt>-2.15 0.1</pt></shape>
+    <zmin>0.0</zmin><zmax>2.5</zmax><color>#8c8c8c</color>
+  </block>
+
+  <!-- East Wall -->
+  <block>
+    <init_pose>5.0 0.0 0</init_pose>
+    <shape><pt>-0.1 -5.0</pt><pt>0.1 -5.0</pt><pt>0.1 5.0</pt><pt>-0.1 5.0</pt></shape>
+    <zmin>0.0</zmin><zmax>2.5</zmax><color>#8c8c8c</color>
+  </block>
+
+  <!-- West Wall -->
+  <block>
+    <init_pose>-5.0 0.0 0</init_pose>
+    <shape><pt>-0.1 -5.0</pt><pt>0.1 -5.0</pt><pt>0.1 5.0</pt><pt>-0.1 5.0</pt></shape>
+    <zmin>0.0</zmin><zmax>2.5</zmax><color>#8c8c8c</color>
+  </block>
+
+  
+  <!-- Tables (left/right columns) -->
+  <block class="square_table"><init_pose>-2.5  2 0</init_pose></block>
+  <block class="square_table"><init_pose>-2.5  0.0 0</init_pose></block>
+  <block class="square_table"><init_pose>-2.5 -2 0</init_pose></block>
+
+ 
+  <block class="square_table"><init_pose>2.5  2 0</init_pose></block>
+  <block class="square_table"><init_pose>2.5  0.0 0</init_pose></block>
+  <block class="square_table"><init_pose>2.5 -2 0</init_pose></block>
+
+  <!-- Chairs (left/right columns) -->
+  <!-- Left Top Table Chairs -->`
+  <block class="purple_chair"><init_pose>-3.75  2.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>-3.75  1.55 0</init_pose></block>
+  <block class="purple_chair"><init_pose>-1.25  2.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>-1.25  1.55 0</init_pose></block>
+
+  <!-- Left Middle Table Chairs -->
+  <block class="purple_chair"><init_pose>-3.75  0.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>-3.75 -0.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>-1.25  0.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>-1.25 -0.45 0</init_pose></block>
+
+  <!-- Left Bottom Table Chairs -->
+  <block class="purple_chair"><init_pose>-3.75 -1.55 0</init_pose></block>
+  <block class="purple_chair"><init_pose>-3.75 -2.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>-1.25 -1.55 0</init_pose></block>
+  <block class="purple_chair"><init_pose>-1.25 -2.45 0</init_pose></block>
+
+  <!-- Right Top Table Chairs -->
+  <block class="purple_chair"><init_pose>1.25  2.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>1.25  1.55 0</init_pose></block>
+  <block class="purple_chair"><init_pose>3.75  2.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>3.75  1.55 0</init_pose></block>
+
+  <!-- Right Middle Table Chairs -->
+  <block class="purple_chair"><init_pose>1.25  0.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>1.25 -0.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>3.75  0.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>3.75 -0.45 0</init_pose></block>
+
+  <!-- Right Bottom Table Chairs -->
+  <block class="purple_chair"><init_pose>1.25 -1.55 0</init_pose></block>
+  <block class="purple_chair"><init_pose>1.25 -2.45 0</init_pose></block>
+  <block class="purple_chair"><init_pose>3.75 -1.55 0</init_pose></block>
+  <block class="purple_chair"><init_pose>3.75 -2.45 0</init_pose></block>
+
+
+
+
+
+
+
+
+
+  <!-- A DEFAULT differential-drive robot -->
+  <vehicle name="robot1">
+    <init_pose>0 0 0</init_pose>  <!-- x y yaw(deg) -->
+
+    <!--  Dynamical model -->
+    <dynamics class="differential">
+      <l_wheel pos="0.0  0.21" mass="2.0" width="0.08" diameter="0.22">
+        <lateral_friction>0.6</lateral_friction>
+      </l_wheel>
+      <r_wheel pos="0.0 -0.21" mass="2.0" width="0.08" diameter="0.22">
+        <lateral_friction>0.6</lateral_friction>
+      </r_wheel>
+
+      <chassis mass="10.0" zmin="0.05" zmax="1" restitution="0.2">
+        <shape>
+          <pt>-0.18 -0.22</pt>
+          <pt> 0.18 -0.22</pt>
+          <pt> 0.25 -0.14</pt>
+          <pt> 0.25  0.14</pt>
+          <pt> 0.18  0.22</pt>
+          <pt>-0.18  0.22</pt>
+          <pt>-0.25  0.14</pt>
+          <pt>-0.25 -0.14</pt>
+        </shape>
+      </chassis>
+
+      <controller class="twist_pid">
+        <KP>2.0</KP>
+        <KI>0.8</KI>
+        <KD>0.05</KD>
+        <max_torque>8.0</max_torque>
+        <V>0.0</V><W>0</W>
+      </controller>
+    </dynamics>
+
+    <!--use the built-in lidar scanner, changed the z -->
+    <include file="/opt/ros/jazzy/share/mvsim/definitions/lidar2d.sensor.xml"
+             sensor_name="laser1"
+             sensor_x="0.15"
+             sensor_y="0.0"
+             sensor_z="1.0"
+             sensor_yaw="0"
+             fov_degrees="270"
+             sensor_nrays="540" />
+  </vehicle>
+</mvsim_world>
+
+<!-- mvsim launch src/humanoid_planning/worlds/classroom.world.xml -->
+<!-- ./scripts/dev.sh -->
